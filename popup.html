@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Lock</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body data-theme="dark">
+
+  <!-- ─── Header ─── -->
+  <header class="header">
+    <div class="header-left">
+      <div class="logo-icon">🔒</div>
+      <h1 class="logo-text">Focus Lock</h1>
+    </div>
+    <button id="themeToggle" class="theme-btn" title="Toggle theme">
+      <span class="theme-icon">🌙</span>
+    </button>
+  </header>
+
+  <!-- ─── Focus Toggle ─── -->
+  <section class="focus-section">
+    <div class="focus-card glass">
+      <div class="focus-status">
+        <span id="statusDot" class="status-dot off"></span>
+        <span id="statusText" class="status-text">Focus Mode Off</span>
+      </div>
+      <button id="focusToggle" class="focus-btn off">
+        <span class="btn-label">Start Focus</span>
+      </button>
+      <div class="timer-row">
+        <span class="timer-label">Session</span>
+        <span id="sessionTimer" class="timer-value">00:00:00</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Blocked Sites ─── -->
+  <section class="sites-section">
+    <div class="sites-header">
+      <h2 class="sites-title">Blocked Sites</h2>
+      <span id="siteCount" class="site-count">0</span>
+    </div>
+    <div class="add-site glass">
+      <input
+        id="newSiteInput"
+        type="text"
+        placeholder="e.g. youtube.com"
+        autocomplete="off"
+        spellcheck="false"
+      >
+      <button id="addSiteBtn" class="add-btn" title="Add site">+</button>
+    </div>
+    <ul id="siteList" class="site-list"></ul>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer class="footer">
+    <span class="footer-text">Total focus: <strong id="totalTime">0h 0m</strong></span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

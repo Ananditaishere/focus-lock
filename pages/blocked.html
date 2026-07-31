@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Lock — Stay Focused</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="blocked.css">
+</head>
+<body>
+
+  <!-- Animated gradient background (CSS-only fallback for missing videos) -->
+  <div class="bg-gradient"></div>
+  <div class="bg-particles" id="particles"></div>
+  <div class="bg-overlay"></div>
+
+  <!-- Content -->
+  <main class="stage">
+    <div class="badge">🔒 FOCUS LOCK</div>
+    <h1 class="headline">
+      This could<br>be <span class="gold">yours.</span>
+    </h1>
+    <p class="subtext">
+      You blocked this site to protect your focus.<br>
+      Close the tab. Lock in. The grind doesn't stop.
+    </p>
+    <div class="actions">
+      <button class="btn-primary" id="btnClose">Close This Tab</button>
+      <button class="btn-ghost" id="btnBack">Go Back Anyway</button>
+    </div>
+    <div class="blocked-url" id="blockedUrlDisplay"></div>
+  </main>
+
+  <script src="blocked.js"></script>
+</body>
+</html>

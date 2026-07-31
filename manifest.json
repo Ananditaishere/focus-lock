@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Lock",
+  "version": "1.0.0",
+  "description": "Block distracting websites and lock in your focus during work sessions.",
+
+  "permissions": [
+    "tabs",
+    "storage",
+    "webNavigation",
+    "alarms"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Focus Lock"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": ["pages/blocked.html", "pages/blocked.js", "pages/blocked.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "icons": {
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  }
+}
